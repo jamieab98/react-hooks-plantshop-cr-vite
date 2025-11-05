@@ -16,7 +16,7 @@ function PlantList({userSearch}) {
       setPlants(plants)
     })
     .catch(error => console.log(error));
-  }, [])
+  }, [plants])
 
   const filteredPlants = plants.filter((p) => p.name.toLowerCase().includes(userSearch.toLowerCase()));
 
