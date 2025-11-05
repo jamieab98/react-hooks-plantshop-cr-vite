@@ -1,6 +1,6 @@
 import React from "react";
 
-function NewPlantForm({image, setImage, name, setName, price, setPrice, handleSubmit}) {
+function NewPlantForm({setImage, setName, setPrice, handleSubmit}) {
 
   return (
     <div className="new-plant-form">

@@ -35,7 +35,7 @@ function PlantPage() {
 
   return (
     <main>
-      <NewPlantForm name={name} setName={setName} image={image} setImage={setImage} price={price} setPrice={setPrice} handleSubmit={handleSubmit}/>
+      <NewPlantForm setName={setName} setImage={setImage} setPrice={setPrice} handleSubmit={handleSubmit}/>
       <Search setUserSearch={setUserSearch}/>
       <PlantList userSearch={userSearch}/>
     </main>
