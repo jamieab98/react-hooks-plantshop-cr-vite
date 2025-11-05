@@ -20,12 +20,10 @@ function PlantList() {
     .catch(error => console.log(error));
   }, [])
 
-
-
   return (
     <ul className="cards">{/* render PlantCards components in here */}
       {plants.map((p) => (
-        <PlantCard />
+        <PlantCard p={p}/>
       )) }
     </ul>
   );
