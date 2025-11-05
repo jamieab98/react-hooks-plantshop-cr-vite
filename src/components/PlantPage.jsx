@@ -10,6 +10,9 @@ function PlantPage() {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const [price, setPrice] = useState(null);
+  const [plantsList, setPlantsList] = useState([]);
+
+  
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -29,6 +32,9 @@ function PlantPage() {
       if (!response.ok) {console.log("something wrong with fetch")}
       return response.json()
     })
+    .then((addedPlant) => {
+      setPlantsList((prevPlantsList) => [...prevPlantsList, addedPlant]);
+    })
     .catch(error => console.log(error))
   }
 
@@ -37,7 +43,7 @@ function PlantPage() {
     <main>
       <NewPlantForm setName={setName} setImage={setImage} setPrice={setPrice} handleSubmit={handleSubmit}/>
       <Search setUserSearch={setUserSearch}/>
-      <PlantList userSearch={userSearch}/>
+      <PlantList userSearch={userSearch} plants={plantsList}/>
     </main>
   );
 }

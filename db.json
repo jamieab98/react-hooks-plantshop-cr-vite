@@ -41,6 +41,12 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "id": "cadf",
+      "name": "Kudzu",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmZxXvWMSRwVDMb-qoG8JE9wcmX1eO-uIDLq5ArrzsmTSxfLW6KXJyHkFWvGf0fU9OXhQT7hT-Nfql4XdsFcwqbpGCauYO4NIkii5GnUkEcg&s=10",
+      "price": "0.01"
     }
   ]
 }
