@@ -10,8 +10,8 @@ function PlantPage() {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const [price, setPrice] = useState(null);
+  const [plants, setPlants] = useState([]);
   const [plantsList, setPlantsList] = useState([]);
-
   
 
   function handleSubmit(e) {
@@ -41,9 +41,9 @@ function PlantPage() {
 
   return (
     <main>
-      <NewPlantForm setName={setName} setImage={setImage} setPrice={setPrice} handleSubmit={handleSubmit}/>
+      <NewPlantForm setName={setName} setImage={setImage} setPrice={setPrice} handleSubmit={handleSubmit} plants={plants} setPlants={setPlants}/>
       <Search setUserSearch={setUserSearch}/>
-      <PlantList userSearch={userSearch} plants={plantsList}/>
+      <PlantList userSearch={userSearch} plants={plants} setPlants={setPlants}/>
     </main>
   );
 }
