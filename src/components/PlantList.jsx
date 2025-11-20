@@ -1,6 +1,6 @@
 import React from "react";
 import PlantCard from "./PlantCard";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 function PlantList({userSearch, plants, setPlants}) {
 
@@ -14,7 +14,7 @@ function PlantList({userSearch, plants, setPlants}) {
       setPlants(data)
     })
     .catch(error => console.log(error));
-  })
+  }, [])
 
   const filteredPlants = plants.filter((p) => p.name.toLowerCase().includes(userSearch.toLowerCase()));
 

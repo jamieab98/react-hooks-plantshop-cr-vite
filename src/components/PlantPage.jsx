@@ -11,7 +11,6 @@ function PlantPage() {
   const [image, setImage] = useState("");
   const [price, setPrice] = useState(null);
   const [plants, setPlants] = useState([]);
-  const [plantsList, setPlantsList] = useState([]);
   
 
   function handleSubmit(e) {
@@ -32,8 +31,8 @@ function PlantPage() {
       if (!response.ok) {console.log("something wrong with fetch")}
       return response.json()
     })
-    .then((addedPlant) => {
-      setPlantsList((prevPlantsList) => [...prevPlantsList, addedPlant]);
+    .then((newPlant) => {
+      setPlants(prev => [...prev, newPlant])
     })
     .catch(error => console.log(error))
   }
